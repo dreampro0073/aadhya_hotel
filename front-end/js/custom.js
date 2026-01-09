@@ -13,8 +13,8 @@ jQuery(document).ready(function($){
 
 $(document).on("click",".toggle-menu",function(){
     $(this).toggleClass("open-menu");
+    $("header ul.menu").slideToggle();
 
-    $(".header .menu").toggleClass("active");
 });
 
 });

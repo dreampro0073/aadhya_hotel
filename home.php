@@ -80,7 +80,7 @@
 		<div class="container">
 			<div class="row">
 				<h2 class="page-title text-center"><small class="line mlr-auto"></small>Explore Rooms</h2>
-				<div class="col-md-4">
+				<div class="col-md-4 mob-mb-20">
 					<div class="home-room-box">
 						<div class="room-images">
 							<img src="<?php echo Theme::imagePath('pic2.jpg')?>">
@@ -103,7 +103,7 @@
 					</div>
 					
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 mob-mb-20">
 					<div class="home-room-box">
 						<div class="room-images">
 							<img src="<?php echo Theme::imagePath('pic4.jpg')?>">
@@ -154,7 +154,7 @@
 	<section class="resort-information sec-padding max">
 		<div class="container pt-100">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 mob-mb-40">
 					<div class="flip-container">
 						<div class="flipper">
 							<div class="support-box pos-center front">
@@ -177,7 +177,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 mob-mb-40">
 					<div class="flip-container">
 						<div class="flipper">
 							<div class="support-box pos-center front">

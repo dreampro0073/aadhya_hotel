@@ -178,9 +178,8 @@ h3{
 .banner-slider {
     position: relative;
     .item {
-        height: 80vh;
-        position: relative;
         img {
+            aspect-ratio: 16/8;
             height: 100%;
             width: 100%;
             object-fit: cover;
@@ -447,19 +446,20 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-
-    .menu {
-        display: none;
-        height: 100vh;
-
-        &.active {
-            display: block;
-        }
-
+    .mob-mb-20{
+        margin-bottom: 20px;
+    }
+    .mob-mb-40{
+        margin-bottom: 50px;
+    }
+    header {
+       
         ul {
+            display: none;
+            text-align: center;
             li {
                 display: block;
-
+               
             }
         }
     }
@@ -472,8 +472,8 @@ footer {
         position: absolute;
         display: inline-block;
         text-align: right;
-        top: 4px;
-        right: 18px;
+        top: -5px;
+        right: 0;
 
         .toggle-menu {
             position: relative;
@@ -527,15 +527,7 @@ footer {
         }
     }
 
-    .banner {
-        padding-top: 78px;
-
-        .banner-slider {
-            .item {
-                height: 27vh;
-            }
-        }
-    }
+    
 
     .welcome-section {
         .content-box {
@@ -562,5 +554,14 @@ footer {
             }
         }
 
+    }
+    h2{
+        font-size: calc(var(--base-font)*1.50);
+    }
+    h3{
+        font-size: calc(var(--base-font)*1.25);
+    }
+    .section-title{
+        font-size: calc(var(--base-font)*1.20);
     }
 }

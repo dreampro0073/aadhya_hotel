@@ -154,19 +154,17 @@ h3 {
 
 .banner-slider {
   position: relative; }
-  .banner-slider .item {
-    height: 80vh;
-    position: relative; }
-    .banner-slider .item img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: center; }
-    .banner-slider .item:after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.2); }
+  .banner-slider .item img {
+    aspect-ratio: 16/8;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center; }
+  .banner-slider .item:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2); }
   .banner-slider .banner-content {
     position: relative;
     inset: 0; }
@@ -358,12 +356,16 @@ footer {
     font-size: calc(var(--base-font)*.0.813); }
 
 @media only screen and (max-width: 768px) {
-  .menu {
+  .mob-mb-20 {
+    margin-bottom: 20px; }
+
+  .mob-mb-40 {
+    margin-bottom: 50px; }
+
+  header ul {
     display: none;
-    height: 100vh; }
-    .menu.active {
-      display: block; }
-    .menu ul li {
+    text-align: center; }
+    header ul li {
       display: block; }
 
   .book-now {
@@ -373,8 +375,8 @@ footer {
     position: absolute;
     display: inline-block;
     text-align: right;
-    top: 4px;
-    right: 18px; }
+    top: -5px;
+    right: 0; }
     .toggle-menu-cont .toggle-menu {
       position: relative;
       width: 36px;
@@ -405,11 +407,6 @@ footer {
         -webkit-transform: rotateZ(-45deg);
         transform: rotateZ(-45deg); }
 
-  .banner {
-    padding-top: 78px; }
-    .banner .banner-slider .item {
-      height: 27vh; }
-
   .welcome-section .content-box {
     margin-top: 40px; }
 
@@ -420,6 +417,15 @@ footer {
     margin-top: -151px; }
     .resort-information .parallex-one .flip-container {
       margin-bottom: 30px !important;
-      height: 160px !important; } }
+      height: 160px !important; }
+
+  h2 {
+    font-size: calc(var(--base-font)*1.50); }
+
+  h3 {
+    font-size: calc(var(--base-font)*1.25); }
+
+  .section-title {
+    font-size: calc(var(--base-font)*1.20); } }
 
 /*# sourceMappingURL=custom.css.map */

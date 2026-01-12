@@ -11,8 +11,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-6">
-					<div>
-						Logo
+					<div class="logo">
+						<a href="<?php echo esc_url(home_url('/')) ?>">NNHP Hotel</a>
 					</div>
 					
 				</div>

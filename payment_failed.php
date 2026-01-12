@@ -7,9 +7,18 @@
 			<?php the_title(); ?>
 		</h1>
 	</section>
-	<div class="container">
-		
-	</div>
+	<section class="sec-padding">
+		<div class="container">
+			<div class="text-center">
+				<h2>
+					<span class="emo">
+						&#128542;
+					</span>
+					<br>Payment Failed
+				</h2>
+			</div>
+		</div>
+	</section>
 </div>
 
 <?php get_footer();?>

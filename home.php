@@ -3,12 +3,17 @@
 <?php get_header(); ?>
 <?php
 
-	$banner_images=[
-		'front-end/images/banner6.jpg',
-		'front-end/images/banner3.jpg',
-		'front-end/images/banner2.jpg',
-		'front-end/images/banner7.jpg',
+	// $banner_images=[
+	// 	'front-end/images/banner6.jpg',
+	// 	'front-end/images/banner3.jpg',
+	// 	'front-end/images/banner2.jpg',
+	// 	'front-end/images/banner7.jpg',
 	
+	// ]; 
+	$banner_images=[
+		'front-end/images/pic1d.jpeg',
+		'front-end/images/pic1c.jpeg',
+		'front-end/images/pic1f.jpeg',
 	]; 
 ?>
 
@@ -41,8 +46,8 @@
 				<div class="col-md-10">
 					<div class="row">
 						<div class="text-center mb-4">
-							<h2>Welcome To Paradise</h2>
-							<p class="fs-15">Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl .Nulleget urna mattis consectetur purus sit amet fermentum</p>
+							<h2>Welcome</h2>
+							<p class="fs-15">Discover a place where comfort meets serenity. From stylish rooms to warm hospitality, NNHP Pods/Hotels Service offers a peaceful retreat with world-class amenities and personalized service for every guest.</p>
 						</div>
 						<div class="col-md-6">
 							<h3 class="page-title"><small class="line"></small>Gallery</h3>
@@ -64,9 +69,17 @@
 						<div class="col-md-6">
 							<div class="content-box">
 								<h3 class="page-title"><small class="line"></small>About Us</h3>
-								<p class="fs-14">Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget laci. Maecenas faucibus mollis interdum.</p>
-								<p class="fs-14">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fer condimentum nibh, ut fermentum massa justo sit amet risus. mentum massa justo sit amet risus.</p>
-								<p class="fs-14">Fusce dapibus, tellus ac cursus commodo ut fermentum massa. mentum massa justo sit amet risus.</p>
+								<p class="fs-15">
+									NNHP Pods/Hotels Service is a premium destination designed for travelers seeking comfort, quality, and tranquility. Located in a peaceful setting, our resort offers beautifully furnished rooms, modern amenities, and exceptional service.
+								</p>
+
+								<p class="fs-15">
+									Our mission is to provide a memorable stay through warm hospitality, clean and elegant spaces, and attention to every detail. Whether you are visiting for leisure, business, or celebration, our team ensures a seamless and enjoyable experience.
+								</p>
+
+								<p class="fs-15">
+									With comfortable accommodations, serene surroundings, and guest-focused services, Paradise Resort is your perfect getaway from the everyday rush.
+								</p>
 							</div>
 						</div>
 						
@@ -83,16 +96,16 @@
 				<div class="col-md-4 mob-mb-20">
 					<div class="home-room-box">
 						<div class="room-images">
-							<img src="<?php echo Theme::imagePath('pic2.jpg')?>">
+							<img src="<?php echo Theme::imagePath('pic1e.jpeg')?>">
 							<div class="home-room-details">
 								<h5><a href="#">Double Beds</a></h5>
 							</div>
 						
 						</div>
 						<div class="room-details">
-							<p class="para">Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tibulum at ero</p>
+							<p class="para">Spacious and comfortable rooms ideal for couples or guests who prefer extra comfort. Designed with cozy bedding, clean interiors, and a peaceful atmosphere for complete relaxation.</p>
 							<div class="room-bottom">
-								<h4>1299rs<span>/6 Hours</span></h4>
+								<h4>599 ₹<span>/6 Hours</span></h4>
 								<a href="<?php echo esc_url(home_url('/book?type=beds')) ?>" class="book-btn">
 									<span>Book Now</span>
 								</a>
@@ -106,17 +119,17 @@
 				<div class="col-md-4 mob-mb-20">
 					<div class="home-room-box">
 						<div class="room-images">
-							<img src="<?php echo Theme::imagePath('pic4.jpg')?>">
+							<img src="<?php echo Theme::imagePath('pic1f.jpeg')?>">
 							<div class="home-room-details">
 								<h5><a href="#">Single Cabins</a></h5>
 								
 							</div>
 						</div>
 						<div class="room-details">
-							<p class="para">Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tibulum at ero</p>
+							<p class="para">Private and well-designed cabins perfect for solo travelers or short stays. Enjoy privacy, cleanliness, and a calm environment at an affordable price.</p>
 
 							<div class="room-bottom">
-								<h4>1299rs<span>/6 Hours</span></h4>
+								<h4>399 ₹<span>/6 Hours</span></h4>
 								<a href="<?php echo esc_url(home_url('/book?type=cabin')) ?>" class="book-btn">
 									<span>Book Now</span>
 								</a>
@@ -129,16 +142,16 @@
 				<div class="col-md-4">
 					<div class="home-room-box">
 						<div class="room-images">
-							<img src="<?php echo Theme::imagePath('pic3.jpg')?>">
+							<img src="<?php echo Theme::imagePath('pic1c.jpeg')?>">
 							<div class="home-room-details">
 								<h5><a href="#">Single Pods</a></h5>
 								
 							</div>
 						</div>
 						<div class="room-details">
-							<p class="para">Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tibulum at ero</p>
+							<p class="para">Modern capsule-style pods offering a smart, affordable, and unique stay experience. Perfect for quick rest, transit travelers, or budget-friendly accommodation.</p>
 							<div class="room-bottom">
-								<h4>1299rs<span>/6 Hours</span></h4>
+								<h4>299 ₹<span>/6 Hours</span></h4>
 								<a href="<?php echo esc_url(home_url('/book?type=pods')) ?>" class="book-btn">
 									<span>Book Now</span>
 								</a>
@@ -185,14 +198,14 @@
 									<i class="fa-solid fa-envelope"></i>
 								</div>
 								<h4>SEND US E-MAIL</h4>
-								<p class="fs-15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et.</p>
+								<p class="fs-15"><a href="mailto:msnnhp11@gmail.com">msnnhp11@gmail.com</a></p>
 							</div>
 							<div class="support-box pos-center back">
 								<div class="title">
 									<i class="fa-solid fa-envelope"></i>
 								</div>
 								<h4>E-MAIL ADDRESS</h4>
-								<p class="fs-15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et.</p>
+								<p class="fs-15"><a href="mailto:msnnhp11@gmail.com">msnnhp11@gmail.com</a></p>
 							</div>
 						</div>
 					</div>

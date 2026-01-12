@@ -8,36 +8,35 @@
 		'front-end/images/banner2.jpg',
 		'front-end/images/banner7.jpg',
 	]; 
+
+	$type = isset($_GET['type']) ? esc_attr($_GET['type']) : '';
+	$title = 'Room Detials';
+
+	switch ($type) {
+		case 'beds':
+			$title = 'Room Detials - Double Beds';
+			break;
+		case 'cabin':
+			$title = 'Room Detials - Cabins';
+			break;
+		case 'pods':
+			$title = 'Room Detials - Pods';
+			break;
+		
+		default:
+			$title = 'Room Detials';
+			break;
+	}
+
 ?>
 <div class="main ng-cloak" ng-app="app" ng-controller="bookCtrl" ng-init="init();">
 	<section class="inside-banner">
 		<h1 class="heading">
-			Room Detials
+			<?php echo $title; ?>
 		</h1>
 	</section>
-	<section class="banner sec-padding d-none">
-		<div class="container">
-			<h2 class="section-title">Photo Gallary</h2>
-			<div class="owl-carousel banner-slider nav-slider">
-				<?php foreach ($banner_images as $key => $banner_image) { ?>
-				<div class="item">
-					<div class="banner-content">
-						<img src="<?php echo get_template_directory_uri() . '/' . $banner_image; ?>" alt="Banner Image">
-						<div class="slider-text">
-							<h4>welcome to luxen hotel</h4>
-						</div>
-						<div class="slide-right"></div>
-		           
-					</div>
-					
-				</div>
-				<?php } ?>
-				
-			</div>
-		</div>
-		
-	</section>
-
+	
+	<?php if($type == 'beds') : ?>
 	<section class="sec-padding">
 		<div class="container">
 			
@@ -45,23 +44,39 @@
 				<div class="col-md-8">
 					<h2 class="section-title">ROOM DESCRIPTION</h2>
 					<p class="fs-14 para">
-						Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus nibh Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac blandit Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac blandit tempus.
+						Our Double Bed rooms are designed for guests who value comfort and space. These rooms offer a relaxing environment with a well-maintained interior, ideal for couples or guests looking for a peaceful stay.
 					</p>
+					
+					<div>
+						<h3 class="section-title">
+							Ideal For
+						</h3>
+						<p class="fs-14 para">
+							Couples, friends, or guests seeking a comfortable and private stay.
+						</p>
 
-					<p class="fs-14 para">
-						Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus nibh Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amr. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac blandit tempus.
-					</p>
+					</div>
+					<div>
+						<h3 class="section-title">
+							Stay Duration
+						</h3>
+						<p class="fs-14 para">
+							₹599 / 6 Hours
+							(Extended stay options available)
+						</p>
+					</div>
+					
 				</div>
 				<div class="col-md-4">
 					<h2 class="section-title">Room Service</h2>
 					<p class="fs-14 para">
-						&#128197; CALENDAR
+						&#128197; Comfortable double bed with fresh linens
 					</p>
 					<p class="fs-14 para">
-						&#128187; Wi Fi
+						&#128187; Clean and spacious room layout
 					</p>
 					<p class="fs-14 para">
-						&#9200; 24/7 Services
+						&#9200; 24/7 Power backup
 					</p>
 				
 				</div>
@@ -69,6 +84,105 @@
 		</div>
 		
 	</section>
+	<?php endif; ?>
+	<?php if($type == 'cabin') : ?>
+	<section class="sec-padding">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-md-8">
+					<h2 class="section-title">ROOM DESCRIPTION</h2>
+					<p class="fs-14 para">
+						Single Cabins offer privacy and convenience for solo travelers. These cabins are thoughtfully designed to provide a quiet and secure stay at an affordable price.
+					</p>
+					
+					<div>
+						<h3 class="section-title">
+							Ideal For
+						</h3>
+						<p class="fs-14 para">
+							Solo travelers, working professionals, and short stays.
+						</p>
+
+					</div>
+					<div>
+						<h3 class="section-title">
+							Stay Duration
+						</h3>
+						<p class="fs-14 para">
+							₹399 / 6 Hours
+							(Flexible stay options available)
+						</p>
+					</div>
+					
+				</div>
+				<div class="col-md-4">
+					<h2 class="section-title">Room Service</h2>
+					<p class="fs-14 para">
+						&#128197;Private single cabin
+					</p>
+					<p class="fs-14 para">
+						&#128187; Comfortable single bed
+					</p>
+					<p class="fs-14 para">
+						&#9200; 24/7 Power backup
+					</p>
+				
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<?php endif; ?>
+	<?php if($type == 'pods') : ?>
+	<section class="sec-padding">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-md-8">
+					<h2 class="section-title">ROOM DESCRIPTION</h2>
+					<p class="fs-14 para">
+						Single Pods are modern, capsule-style accommodations designed for budget-friendly and short-duration stays. They provide a unique experience while maintaining privacy and safety.
+					</p>
+					
+					<div>
+						<h3 class="section-title">
+							Ideal For
+						</h3>
+						<p class="fs-14 para">
+							Transit travelers, backpackers, and budget-conscious guests.
+						</p>
+
+					</div>
+					<div>
+						<h3 class="section-title">
+							Stay Duration
+						</h3>
+						<p class="fs-14 para">
+							₹299 / 6 Hours
+							(Hourly extensions available)
+						</p>
+					</div>
+					
+				</div>
+				<div class="col-md-4">
+					<h2 class="section-title">Room Service</h2>
+					<p class="fs-14 para">
+						&#128197; Compact sleeping pod
+					</p>
+					<p class="fs-14 para">
+						&#128187; Personal light and fan
+					</p>
+					<p class="fs-14 para">
+						&#9200; 24/7 Power backup
+					</p>
+				
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<?php endif; ?>
 	<section class="books sec-padding pt-0">
 		<div class="container">
 			<h3 class="section-title text-center">Book Now</h3>
@@ -100,11 +214,11 @@
 		            </div>
 		            <div class="col-md-4 form-group">
 		                <label>Arivals Date</label>
-		                <input type="date" ng-model="formData.date" class="form-control" />
+		                <input type="date" ng-model="formData.date" class="form-control" required />
 		            </div>  
 		            <div class="col-md-4 form-group">
 		                <label>Expected Check In Time</label>
-		                <input type="time" ng-model="formData.check_in" class="form-control" ng-change="checkoutTime()" />
+		                <input type="time" ng-model="formData.check_in" class="form-control" ng-change="checkoutTime()" required />
 		            </div> 
 		            <div class="col-md-4 form-group">
 		                <label>Check Out Time</label>
@@ -114,7 +228,7 @@
 		                           
 		            <div class="col-md-4 form-group">
 		                <label>Hours</label>
-		                <select ng-model="formData.hours_occ" class="form-select" ng-change="changeAmount()" required convert-to-number >
+		                <select ng-model="formData.hours_occ" class="form-select" ng-change="changeAmount(); checkoutTime();" required convert-to-number >
 		                    <option value="">--Select--</option>
 		                    <option ng-repeat="item in hours" value="{{item.value}}">{{ item.label}}</option>
 		                    
@@ -133,8 +247,8 @@
 		            <div class="col-md-4 form-group">
 		                <label>Booking Amount</label>
 		                <br>
-		                <label><input type="radio"  ng-model="formData.full_payment" value="1" />&nbsp;Full Payment&nbsp;</label>
-		                <label><input type="radio"  ng-model="formData.full_payment" value="2" />&nbsp;Booking Amount&nbsp;</label>
+		                <label><input type="radio"  ng-model="formData.full_payment" value="1" required />&nbsp;Full Payment&nbsp;</label>
+		                <label><input type="radio"  ng-model="formData.full_payment" value="2" required />&nbsp;Booking Amount&nbsp;</label>
 		            </div>
 		            <div class="col-md-4 form-group" ng-if="formData.full_payment == 1">
 		                <label>Paid Amount</label>

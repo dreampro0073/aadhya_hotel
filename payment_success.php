@@ -7,7 +7,16 @@
 			<?php the_title(); ?>
 		</h1>
 	</section>
-	<?php the_content(); ?>
+	
+	<section class="sec-padding">
+		<div class="container">
+			<div class="text-center">
+				<h2>
+					<span class="emo">&#128522;</span> <br>Payment Success
+				</h2>
+			</div>
+		</div>
+	</section>
 </div>
 
 <?php get_footer();?>

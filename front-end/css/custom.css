@@ -98,6 +98,11 @@ h2 {
   margin-bottom: 20px;
   font-weight: 500; }
 
+.emo {
+  display: block; }
+  .emo img {
+    font-size: 80px; }
+
 h3 {
   font-size: calc(var(--base-font)*1.50);
   margin-bottom: 16px;
@@ -152,10 +157,15 @@ h3 {
   .book-btn:hover span {
     color: var(--white-color); }
 
+.logo a {
+  color: var(--black-color);
+  font-size: calc(var(--base-font)*1.75);
+  line-height: 50px; }
+
 .banner-slider {
   position: relative; }
   .banner-slider .item img {
-    aspect-ratio: 16/8;
+    aspect-ratio: 16/6;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -336,16 +346,22 @@ h3 {
 
 .inside-banner {
   position: relative;
-  background: url("../images/banner2.jpg");
+  background: url("../images/pic4.jpg");
   background-repeat: no-repeat;
   padding: 100px 0;
-  background-position: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  background-blend-mode: multiply;
+  background-position: bottom;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  position: relative; }
+  .inside-banner:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.5); }
   .inside-banner h1 {
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    z-index: 1; }
 
 footer {
   background: var(--white-bg-color);
@@ -354,6 +370,11 @@ footer {
     margin: 0;
     text-align: center;
     font-size: calc(var(--base-font)*.0.813); }
+
+span.error-msg {
+  font-size: calc(var(--base-font)*0.913);
+  color: #f00;
+  display: block; }
 
 @media only screen and (max-width: 768px) {
   .mob-mb-20 {
@@ -426,6 +447,9 @@ footer {
     font-size: calc(var(--base-font)*1.25); }
 
   .section-title {
-    font-size: calc(var(--base-font)*1.20); } }
+    font-size: calc(var(--base-font)*1.20); }
+
+  .logo a {
+    font-size: calc(var(--base-font)*1); } }
 
 /*# sourceMappingURL=custom.css.map */

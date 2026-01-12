@@ -1,6 +1,19 @@
 var app = angular.module('app', [
-
+    'jcs-autoValidate',
 ]);
+app.directive('convertToNumber', function() {
+  return {
+    require: 'ngModel',
+    link: function(scope, element, attrs, ngModel) {
+      ngModel.$parsers.push(function(val) {
+        return val != null ? parseInt(val, 10) : null;
+      });
+      ngModel.$formatters.push(function(val) {
+        return val != null ? '' + val : null;
+      });
+    }
+  };
+});
 
 var base_url = 'http://localhost:8888/shri_tech/public/';
 
@@ -55,9 +68,11 @@ app.controller('bookCtrl',function($scope , $http, $timeout , DBService){
         no_of_day:'',
         discount_amount:0,
         no_of_rooms:1,
+        hours_occ:6,
         
     };
 
+    $scope.entry_id = 0;
     $scope.hours = [];
     $scope.types = [];
 
@@ -100,22 +115,20 @@ app.controller('bookCtrl',function($scope , $http, $timeout , DBService){
     $scope.onSubmit = function(){
         DBService.postCall($scope.formData,'api/rooms/book-room').then(function(data){
             if(data.success){
-                $scope.createOrder(data.entery);
+                $scope.entry_id = data.entry_id;
+                $scope.createOrder();
             }else{
                 alert(data.message);
             }
         });
     }
 
-    $scope.createOrder = function(entry){
+    $scope.createOrder = function(){
         $scope.placing_order = true;
-        DBService.postCall({
-            entry: entry,
-        },'api/payment/create-order').then(function(data){
+        DBService.postCall({entry_id:$scope.entry_id},'api/payment/create-order').then(function(data){
             $scope.placing_order = false;
             if (data.success) {
                 window.location.href = data.redirect_url;
-                // window.location.href = res.data.data.instrumentResponse.redirectInfo.url;
             } else {
                 alert('Payment failed');
                 $scope.placing_order = false;

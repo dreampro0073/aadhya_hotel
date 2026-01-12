@@ -16,7 +16,7 @@ app.directive('convertToNumber', function() {
 });
 
 // var base_url = 'http://localhost:8888/shri_tech/public/';
-var base_url = 'https://aadhyasriwebsolutions.com/api/';
+var base_url = 'https://aadhyasriwebsolutions.com/';
 
 app.service('DBService', function($http, $rootScope){
 

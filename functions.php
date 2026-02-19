@@ -2,7 +2,7 @@
 
 function my_custom_scripts()
 {
-    $version = '1.3.2';
+    $version = '1.3.3';
 
     
     $local_path = get_template_directory_uri();
@@ -17,28 +17,28 @@ function my_custom_scripts()
 
     
     // Enqueue stylesheets
-    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/front-end/plugins/bootstrap/css/bootstrap.min.css', array(), '1.0.0', false);
+    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/front-end/plugins/bootstrap/css/bootstrap.min.css', array(), '1.1.3', false);
      //Carousel css
-    wp_enqueue_style('owl-css', $local_path . '/front-end/plugins/owl-carousel/dist/assets/owl.carousel.min.css', array(), '1.0.0', false);
-    wp_enqueue_style('owl-theme', $local_path . '/front-end/plugins/owl-carousel/dist/assets/owl.theme.default.css', array(), '1.0.0', false);
+    wp_enqueue_style('owl-css', $local_path . '/front-end/plugins/owl-carousel/dist/assets/owl.carousel.min.css', array(), '1.1.3', false);
+    wp_enqueue_style('owl-theme', $local_path . '/front-end/plugins/owl-carousel/dist/assets/owl.theme.default.css', array(), '1.1.3', false);
     wp_enqueue_style('header-css', $local_path . '/front-end/css/header.css', array(), $version, false);
     wp_enqueue_style('custom-css', $local_path . '/front-end/css/custom.css', array(), $version, false);
    
   
-   wp_enqueue_script('my-jquery' , get_template_directory_uri() . '/front-end/js/jquery.min.js', array(), '1.1.2', true);
-    wp_enqueue_script('bootstrap-bundle', get_template_directory_uri() . '/front-end/plugins/bootstrap/js/bootstrap.bundle.min.js', array('my-jquery'), '1.1.2', true);
-    wp_enqueue_script('lightbox-js', get_template_directory_uri() . '/front-end/plugins/lightbox/js/lightbox.min.js', array(), '1.1.2', true);
+   wp_enqueue_script('my-jquery' , get_template_directory_uri() . '/front-end/js/jquery.min.js', array(), '1.1.3', true);
+    wp_enqueue_script('bootstrap-bundle', get_template_directory_uri() . '/front-end/plugins/bootstrap/js/bootstrap.bundle.min.js', array('my-jquery'), '1.1.3', true);
+    wp_enqueue_script('lightbox-js', get_template_directory_uri() . '/front-end/plugins/lightbox/js/lightbox.min.js', array(), '1.1.3', true);
     
 
 
      //Carousel js
-    wp_enqueue_script('owl-js', $local_path . '/front-end/plugins/owl-carousel/dist/owl.carousel.min.js', array(), '1.0.0', true);
+    wp_enqueue_script('owl-js', $local_path . '/front-end/plugins/owl-carousel/dist/owl.carousel.min.js', array(), '1.1.3', true);
 
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/front-end/plugins/bootstrap/js/bootstrap.js', array(), '1.1.2', true);
+    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/front-end/plugins/bootstrap/js/bootstrap.js', array(), '1.1.3', true);
     
-    wp_enqueue_script('angular-js', get_template_directory_uri() . '/front-end/js/angular.min.js', array(), '1.1.2', true);
-    wp_enqueue_script('jcs-validate-js', get_template_directory_uri() . '/front-end/js/jcs-auto-validate.js', array(), '1.1.2', true);
-    wp_enqueue_script('app-js', get_template_directory_uri() . '/front-end/js/app.js', array(), '1.1.2', true);
+    wp_enqueue_script('angular-js', get_template_directory_uri() . '/front-end/js/angular.min.js', array(), '1.1.3', true);
+    wp_enqueue_script('jcs-validate-js', get_template_directory_uri() . '/front-end/js/jcs-auto-validate.js', array(), '1.1.3', true);
+    wp_enqueue_script('app-js', get_template_directory_uri() . '/front-end/js/app.js', array(), '1.1.3', true);
 
 
 

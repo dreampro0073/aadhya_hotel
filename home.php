@@ -19,7 +19,7 @@
 
 
 <div class="main">
-	<section class="banner">
+	<section class="banner" id="home">
 
 		<div class="owl-carousel banner-slider">
 			<?php foreach ($banner_images as $key => $banner_image) { ?>
@@ -89,7 +89,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="luxury-rooms sec-padding">
+	<section class="luxury-rooms sec-padding" id="services">
 		<div class="container">
 			<div class="row">
 				<h2 class="page-title text-center"><small class="line mlr-auto"></small>Explore Rooms</h2>
@@ -164,7 +164,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="resort-information sec-padding max">
+	<section class="resort-information sec-padding max" id="contect">
 		<div class="container pt-100">
 			<div class="row">
 				<div class="col-md-4 mob-mb-40">

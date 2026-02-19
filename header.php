@@ -28,23 +28,21 @@
 				<div class="col-md-9">
 					<ul class="menu">
 						<li>
-						  	<a href="javascript:;">Home</a>
+						  	<a class="scroll-link" href="<?php echo esc_url(home_url('/#home')) ?>">Home</a>
 						</li>
+						
 						<li>
-							<a href="javascript:;">Features</a>
-						</li>
-						<li>
-							<a href="javascript:;">Services</a>
+							<a class="scroll-link" href="<?php echo esc_url(home_url('/#services')) ?>">Services</a>
 
 						</li>
 						
 						<li>
-							<a href="javascript:;">
+							<a class="scroll-link" href="<?php echo esc_url(home_url('/#contect')) ?>">
 								Contact
 							</a>
 						</li>
 						<li>
-							<a href="javascript:;">
+							<a href="<?php echo esc_url(home_url('/book')) ?>">
 								Book Now
 							</a>
 						</li>

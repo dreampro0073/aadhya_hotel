@@ -67,18 +67,23 @@ app.controller('bookCtrl',function($scope , $http, $timeout , DBService){
         paid_amount:0,
         total_amount:0,
         no_of_day:'',
-        discount_amount:0,
         no_of_rooms:1,
         hours_occ:6,
         
     };
 
+    $scope.processing = false;
+    $scope.show_form = true;
+    $scope.booked_entry = {};
+
     $scope.entry_id = 0;
     $scope.hours = [];
     $scope.types = [];
 
+  
+
     $scope.init = function(){
-        $scope.processing = true;
+        
         DBService.postCall({},'api/rooms/avail-init').then(function(data){
             if(data.success){
                 $scope.types = data.types;
@@ -114,11 +119,16 @@ app.controller('bookCtrl',function($scope , $http, $timeout , DBService){
     }
 
     $scope.onSubmit = function(){
+        $scope.processing = true;
         DBService.postCall($scope.formData,'api/rooms/book-room').then(function(data){
             if(data.success){
-                $scope.entry_id = data.entry_id;
-                $scope.createOrder();
+                $scope.processing = false;
+                $scope.show_form = false;
+                $scope.booked_entry = data.booked_entry;
+                // $scope.entry_id = data.entry_id;
+                // $scope.createOrder();
             }else{
+                $scope.processing = false;
                 alert(data.message);
             }
         });

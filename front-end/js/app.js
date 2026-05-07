@@ -15,8 +15,8 @@ app.directive('convertToNumber', function() {
   };
 });
 
-// var base_url = 'http://localhost:8888/shri_tech/public/';
-var base_url = 'https://aadhyasriwebsolutions.com/';
+var base_url = 'http://localhost:8888/shri_tech/public/';
+// var base_url = 'https://aadhyasriwebsolutions.com/';
 
 app.service('DBService', function($http, $rootScope){
 
@@ -68,7 +68,8 @@ app.controller('bookCtrl',function($scope , $http, $timeout , DBService){
         total_amount:0,
         no_of_day:'',
         no_of_rooms:1,
-        hours_occ:6,
+        hours_occ:12,
+        type:3,
         
     };
 
@@ -79,6 +80,64 @@ app.controller('bookCtrl',function($scope , $http, $timeout , DBService){
     $scope.entry_id = 0;
     $scope.hours = [];
     $scope.types = [];
+    $scope.selectedRoom = {};
+
+    $scope.resetData = () => {
+        $scope.formData = {
+            name:'',
+            mobile:"",
+            paid_amount:0,
+            total_amount:0,
+            no_of_day:'',
+            no_of_rooms:1,
+            hours_occ:12,
+            type:3,
+        };
+
+        $scope.processing = false;
+        $scope.show_form = true;
+        $scope.booked_entry = {};
+
+        $scope.entry_id = 0;
+        $scope.hours = [];
+        $scope.types = [];
+        $scope.selectedRoom = {};
+
+        $scope.init();
+    }
+
+    $scope.roomData = [
+
+        {
+            type:3,
+            name: 'Double Bed Room',
+            tag: 'Double Bed',
+            price: 899,
+            img: 'https://hotel.aadhyasriwebsolutions.com/wp-content/themes/aadhya_theme/front-end/images/pic1e.jpeg',
+            ideal: 'Couples & guests',
+            desc: 'Spacious rooms with cozy bedding, clean interiors and peaceful atmosphere.'
+        },
+
+        {
+            type:2,
+            name: 'Single Cabin',
+            tag: 'Single Cabin',
+            price: 399,
+            img: 'https://hotel.aadhyasriwebsolutions.com/wp-content/themes/aadhya_theme/front-end/images/pic1f.jpeg',
+            ideal: 'Solo travelers',
+            desc: 'Private, well-designed cabins for short stays with calm environment.'
+        },
+
+        {
+            type:1,
+            name: 'Single Pod',
+            tag: 'Single Pod',
+            price: 299,
+            img: 'https://hotel.aadhyasriwebsolutions.com/wp-content/themes/aadhya_theme/front-end/images/pic1c.jpeg',
+            ideal: 'Transit travelers',
+            desc: 'Modern capsule-style pods for quick rest and budget-friendly stays.'
+        }
+    ];
 
   
 
@@ -89,7 +148,26 @@ app.controller('bookCtrl',function($scope , $http, $timeout , DBService){
                 $scope.types = data.types;
                 $scope.hours = data.hours;
             }
+
+            $scope.selectRoom(3)
         });
+    }
+
+
+
+
+    $scope.selectRoom = (type) => {
+        $scope.formData.type = type;
+        if($scope.formData.type == 3 && $scope.formData.hours_occ == 6){
+            $scope.formData.hours_occ = 12;
+        }
+        let findData = $scope.roomData.find(room => room.type == type);
+        // console.log(findData);
+        if(findData){
+            $scope.selectedRoom = findData;
+        }
+
+        $scope.changeAmount();
     }
 
     $scope.changeAmount = function() {

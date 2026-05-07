@@ -1,8 +1,8 @@
-<?php /* Template Name: Home Page */ ?>
+<?php /* Template Name: Home Page Old */ ?>
 
 <?php get_header(); ?>
 <?php
-
+	$image_url = get_template_directory_uri() . '/';
 	// $banner_images=[
 	// 	'front-end/images/banner6.jpg',
 	// 	'front-end/images/banner3.jpg',
@@ -19,222 +19,303 @@
 
 
 <div class="main">
-	<section class="banner" id="home">
+	<!-- NAVIGATION -->
+		<nav id="nav">
+		  <a href="#home" class="nav-logo">NNHP Hotel</a>
+		  <ul class="nav-links">
+		    <li><a href="#home">Home</a></li>
+		    <li><a href="#services">Rooms</a></li>
+		    <li><a href="#about">About</a></li>
+		    <li><a href="#contect">Contact</a></li>
+		    <li><a href="<?php echo esc_url(home_url('/book')) ?>" class="nav-cta">Book Now</a></li>
+		  </ul>
+		  <div class="hamburger" onclick="toggleMenu()">
+		    <span></span><span></span><span></span>
+		  </div>
+		</nav>
 
-		<div class="owl-carousel banner-slider">
-			<?php foreach ($banner_images as $key => $banner_image) { ?>
-			<div class="item">
-				<div class="banner-content">
-					<img src="<?php echo get_template_directory_uri() . '/' . $banner_image; ?>" alt="Banner Image">
-					<div class="slider-text">
-						<h4>welcome to luxen hotel</h4>
-					</div>
-					<div class="slide-right"></div>
-	           
-				</div>
-				
-			</div>
+		<!-- HERO -->
+		<section class="hero" id="home">
+		  <div class="hero-slides" id="heroSlides">
+
+		  	<?php foreach ($banner_images as $key => $image) { ?>
+			    <div 
+			        class="hero-slide active" 
+			        style="background-image: url('<?php echo $image_url . $image; ?>');">
+			    </div>
 			<?php } ?>
-			
-		</div>
+		    
+		  </div>
+		  <div class="hero-content">
+		    <div class="hero-eyebrow">Gorakhpur Railway Station</div>
+		    <h1 class="hero-title">New Nabratana<br><em>Pvt Hospitality</em></h1>
+		    <p class="hero-sub">Comfort, rest, and quiet elegance — steps from the platform. Discover premium pods, cabins, and double bed rooms at unbeatable value.</p>
+		    <div class="hero-actions">
+		      <a href="<?php echo esc_url(home_url('/book')) ?>" class="btn-primary">Reserve a Room</a>
+		      <a href="#services" class="btn-outline">Explore Rooms</a>
+		    </div>
+		  </div>
+		  <div class="hero-dots" id="heroDots">
+		    <div class="hero-dot active" onclick="goSlide(0)"></div>
+		    <div class="hero-dot" onclick="goSlide(1)"></div>
+		    <div class="hero-dot" onclick="goSlide(2)"></div>
+		  </div>
+		</section>
+
+		<!-- WELCOME -->
+		<section id="welcome">
+		  <div class="welcome">
+		    <div class="welcome-images">
+		      <div class="welcome-img-main">
+		        <img src="<?php echo $image_url."front-end/images/pic1.jpg"; ?>" alt="Hotel interior">
+		      </div>
+		      <div class="welcome-img-accent">
+		        <img src="<?php echo $image_url."front-end/images/pic2.jpg"; ?>" alt="Room detail">
+		      </div>
+		      <div class="welcome-badge">Est. Gorakhpur</div>
+		    </div>
+		    <div>
+		      <p class="section-label">Welcome</p>
+		      <h2 class="section-title">Where Comfort<br>Meets Serenity</h2>
+		      <div class="divider"></div>
+		      <p class="section-body">Discover a place where comfort meets serenity. From stylish rooms to warm hospitality, NNHP Pods/Hotels Service offers a peaceful retreat with world-class amenities and personalized service for every guest.</p>
+		      <p class="section-body" style="margin-top:1rem">Whether you are transiting through Gorakhpur or staying for leisure, our team ensures a seamless and enjoyable experience.</p>
+		      <a href="#services" class="btn-primary" style="margin-top:2rem; display:inline-block">Our Rooms</a>
+		    </div>
+		  </div>
+		</section>
+
+		<!-- ROOMS -->
+		<section id="services">
+		  <div class="rooms-header">
+		    <div>
+		      <p class="section-label">Accommodations</p>
+		      <h2 class="section-title" style="margin-bottom:0">Explore Our Rooms</h2>
+		    </div>
+		    <a href="<?php echo esc_url(home_url('/book')) ?>" class="btn-outline" style="margin-bottom:0.5rem">Book a Stay</a>
+		  </div>
+		  <div class="rooms-grid">
+		    <div class="room-card">
+		      <div class="room-img">
+		        <img src="<?php echo $image_url."front-end/images/pic1e.jpeg"; ?>" alt="Double Beds">
+		        <span class="room-type-tag">Double Beds</span>
+		      </div>
+		      <div class="room-body">
+		        <h3 class="room-name">Double Bed Room</h3>
+		        <p class="room-desc">Spacious and comfortable rooms ideal for couples or guests who prefer extra comfort. Cozy bedding, clean interiors, and a peaceful atmosphere.</p>
+		        <div class="room-footer">
+		          <div class="room-price">
+		            <span class="amount">₹599</span>
+		            <span class="per">per 6 hours</span>
+		          </div>
+		          <a href="<?php echo esc_url(home_url('/book?type=beds')); ?>" class="room-book">Book Now</a>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="room-card">
+		      <div class="room-img">
+		      	<img src="<?php echo $image_url."front-end/images/pic1f.jpeg"; ?>" alt="Single Cabin">
+		        
+		        <span class="room-type-tag">Single Cabin</span>
+		      </div>
+		      <div class="room-body">
+		        <h3 class="room-name">Single Cabin</h3>
+		        <p class="room-desc">Private and well-designed cabins perfect for solo travelers or short stays. Enjoy privacy, cleanliness, and a calm environment at an affordable price.</p>
+		        <div class="room-footer">
+		          <div class="room-price">
+		            <span class="amount">₹399</span>
+		            <span class="per">per 6 hours</span>
+		          </div>
+		          <a href="<?php echo esc_url(home_url('/book?type=cabin')); ?>" class="room-book">Book Now</a>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="room-card">
+		      <div class="room-img">
+		      	<img src="<?php echo $image_url."front-end/images/pic1c.jpeg"; ?>" alt="Single Pod">
+
+		        
+		        <span class="room-type-tag">Single Pod</span>
+		      </div>
+		      <div class="room-body">
+		        <h3 class="room-name">Single Pod</h3>
+		        <p class="room-desc">Modern capsule-style pods offering a smart, affordable, and unique stay. Perfect for quick rest, transit travelers, or budget-friendly accommodation.</p>
+		        <div class="room-footer">
+		          <div class="room-price">
+		            <span class="amount">₹299</span>
+		            <span class="per">per 6 hours</span>
+		          </div>
+		          <a href="<?php echo esc_url(home_url('/book?type=pods')); ?>" class="room-book">Book Now</a>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</section>
+
+		<!-- GALLERY -->
+		<section>
+		  <div class="gallery-section">
+		    <div style="text-align:center">
+		      <p class="section-label">Gallery</p>
+		      <h2 class="section-title">A Glimpse Inside</h2>
+		    </div>
+		    <div class="gallery-grid">
+		      <div class="gallery-item">
+
+		      	<img src="<?php echo $image_url."front-end/images/pic1d.jpeg"; ?>" alt="Hotel">
+
+		      </div>
+		      <div class="gallery-item">
+		      	<img src="<?php echo $image_url."front-end/images/pic1.jpg"; ?>" alt="Room">
+
+		      </div>
+		      <div class="gallery-item">
+		      	<img src="<?php echo $image_url."front-end/images/pic2.jpg"; ?>" alt="Amenity">
+		        
+		      </div>
+		      <div class="gallery-item">
+		      	<img src="<?php echo $image_url."front-end/images/pic1f.jpeg"; ?>" alt="Cabin">
+
+		      </div>
+		      <div class="gallery-item">
+		      	<img src="<?php echo $image_url."front-end/images/pic1c.jpeg"; ?>" alt="Pod">
+		      </div>
+		    </div>
+		  </div>
+		</section>
+
+		<!-- ABOUT -->
+		<section id="about">
+		  <div class="about-section">
+		    <div>
+		      <p class="section-label">About Us</p>
+		      <h2 class="section-title">A Premium Stay<br>in Gorakhpur</h2>
+		      <div class="divider"></div>
+		      <p class="section-body">NNHP Pods/Hotels Service is a premium destination designed for travelers seeking comfort, quality, and tranquility. Located at Gorakhpur Railway Station Platform 9, we offer beautifully furnished rooms, modern amenities, and exceptional service.</p>
+		      <p class="section-body" style="margin-top:1rem">Our mission is to provide a memorable stay through warm hospitality, clean and elegant spaces, and attention to every detail.</p>
+		      <div class="about-stats">
+		        <div class="stat-box">
+		          <div class="stat-number">3</div>
+		          <div class="stat-label">Room Types</div>
+		        </div>
+		        <div class="stat-box">
+		          <div class="stat-number">24/7</div>
+		          <div class="stat-label">Power Backup</div>
+		        </div>
+		        <div class="stat-box">
+		          <div class="stat-number">₹299</div>
+		          <div class="stat-label">Starting From</div>
+		        </div>
+		        <div class="stat-box">
+		          <div class="stat-number">Pltfm 9</div>
+		          <div class="stat-label">Location</div>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="about-img">
+		      <img src="<?php echo $image_url."front-end/images/pic1e.jpeg"; ?>" alt="Hotel room">
+
+		      
+		      <div class="about-quote">
+		        <p>"Comfort, rest, and quiet elegance — right at the station."</p>
+		      </div>
+		    </div>
+		  </div>
+		</section>
+
+		<!-- CONTACT -->
+		<section id="contect">
+		  <div class="contact-inner">
+		    <div>
+		      <p class="section-label">Contact Us</p>
+		      <h2 class="section-title">Get in Touch</h2>
+		      <div class="divider"></div>
+		      <p class="section-body">We're here to assist with your booking or any queries. Reach out and our team will respond promptly.</p>
+		      <div class="contact-items">
+		        <div class="contact-item">
+		          <div class="contact-icon">📞</div>
+		          <div class="contact-text">
+		            <div class="label">Phone</div>
+		            <a href="tel:9369023506">9369023506</a>
+		          </div>
+		        </div>
+		        <div class="contact-item">
+		          <div class="contact-icon">✉️</div>
+		          <div class="contact-text">
+		            <div class="label">Email</div>
+		            <a href="mailto:msnnhp11@gmail.com">msnnhp11@gmail.com</a>
+		          </div>
+		        </div>
+		        <div class="contact-item">
+		          <div class="contact-icon">📍</div>
+		          <div class="contact-text">
+		            <div class="label">Address</div>
+		            <p>Sleeping Pod Hotel, Gorakhpur Railway Station, Platform No. 9</p>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		    <div>
+		      <div class="contact-map">
+		        <p>Gorakhpur Railway Station, Platform 9</p>
+		      </div>
+		      <div style="margin-top:2rem; text-align:center">
+		        <a href="<?php echo esc_url(home_url('/	book')); ?>" class="btn-primary" style="display:inline-block; width:100%; text-align:center">Book Your Stay Now</a>
+		      </div>
+		    </div>
+		  </div>
+		</section>
 		
-	</section>
-
-	<section class="welcome-section sec-padding">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-10">
-					<div class="row">
-						<div class="text-center mb-4">
-							<h2>Welcome</h2>
-							<p class="fs-15">Discover a place where comfort meets serenity. From stylish rooms to warm hospitality, NNHP Pods/Hotels Service offers a peaceful retreat with world-class amenities and personalized service for every guest.</p>
-						</div>
-						<div class="col-md-6">
-							<h3 class="page-title"><small class="line"></small>Gallery</h3>
-							<div class="owl-carousel banner-slider dots-slider">
-
-								
-								<div class="flexslider">
-
-									<img src="<?php echo Theme::imagePath('pic1.jpg') ?>" >
-									
-								</div>
-								<div class="flexslider">
-
-									<img src="<?php echo Theme::imagePath('pic2.jpg') ?>" >
-									
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="content-box">
-								<h3 class="page-title"><small class="line"></small>About Us</h3>
-								<p class="fs-15">
-									NNHP Pods/Hotels Service is a premium destination designed for travelers seeking comfort, quality, and tranquility. Located in a peaceful setting, our resort offers beautifully furnished rooms, modern amenities, and exceptional service.
-								</p>
-
-								<p class="fs-15">
-									Our mission is to provide a memorable stay through warm hospitality, clean and elegant spaces, and attention to every detail. Whether you are visiting for leisure, business, or celebration, our team ensures a seamless and enjoyable experience.
-								</p>
-
-								<p class="fs-15">
-									With comfortable accommodations, serene surroundings, and guest-focused services, Paradise Resort is your perfect getaway from the everyday rush.
-								</p>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</section>
-	<section class="luxury-rooms sec-padding" id="services">
-		<div class="container">
-			<div class="row">
-				<h2 class="page-title text-center"><small class="line mlr-auto"></small>Explore Rooms</h2>
-				<div class="col-md-4 mob-mb-20">
-					<div class="home-room-box">
-						<div class="room-images">
-							<img src="<?php echo Theme::imagePath('pic1e.jpeg')?>">
-							<div class="home-room-details">
-								<h5><a href="#">Double Beds</a></h5>
-							</div>
-						
-						</div>
-						<div class="room-details">
-							<p class="para">Spacious and comfortable rooms ideal for couples or guests who prefer extra comfort. Designed with cozy bedding, clean interiors, and a peaceful atmosphere for complete relaxation.</p>
-							<div class="room-bottom">
-								<h4>599 ₹<span>/6 Hours</span></h4>
-								<a href="<?php echo esc_url(home_url('/book?type=beds')) ?>" class="book-btn">
-									<span>Book Now</span>
-								</a>
-							</div>
-						</div>
-						
-					
-					</div>
-					
-				</div>
-				<div class="col-md-4 mob-mb-20">
-					<div class="home-room-box">
-						<div class="room-images">
-							<img src="<?php echo Theme::imagePath('pic1f.jpeg')?>">
-							<div class="home-room-details">
-								<h5><a href="#">Single Cabins</a></h5>
-								
-							</div>
-						</div>
-						<div class="room-details">
-							<p class="para">Private and well-designed cabins perfect for solo travelers or short stays. Enjoy privacy, cleanliness, and a calm environment at an affordable price.</p>
-
-							<div class="room-bottom">
-								<h4>399 ₹<span>/6 Hours</span></h4>
-								<a href="<?php echo esc_url(home_url('/book?type=cabin')) ?>" class="book-btn">
-									<span>Book Now</span>
-								</a>
-							</div>
-						</div>
-						
-						
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="home-room-box">
-						<div class="room-images">
-							<img src="<?php echo Theme::imagePath('pic1c.jpeg')?>">
-							<div class="home-room-details">
-								<h5><a href="#">Single Pods</a></h5>
-								
-							</div>
-						</div>
-						<div class="room-details">
-							<p class="para">Modern capsule-style pods offering a smart, affordable, and unique stay experience. Perfect for quick rest, transit travelers, or budget-friendly accommodation.</p>
-							<div class="room-bottom">
-								<h4>299 ₹<span>/6 Hours</span></h4>
-								<a href="<?php echo esc_url(home_url('/book?type=pods')) ?>" class="book-btn">
-									<span>Book Now</span>
-								</a>
-							</div>
-						</div>
-						
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="resort-information sec-padding max" id="contect">
-		<div class="container pt-100">
-			<div class="row">
-				<div class="col-md-4 mob-mb-40">
-					<div class="flip-container">
-						<div class="flipper">
-							<div class="support-box pos-center front">
-								<div class="title">
-									<i class="fa fa-phone"></i>
-								</div>
-								<h4>Call Us</h4>
-								<p class="fs-15">
-									<a href="tel:9369023506">9369023506</a>
-
-								</p>
-							</div>
-							<div class="support-box pos-center back">
-								<div class="title">
-									<i class="fa fa-phone"></i>
-								</div>
-								<h4>Phone Number</h4>
-								<p class="fs-15"><a href="tel:9369023506">9369023506</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 mob-mb-40">
-					<div class="flip-container">
-						<div class="flipper">
-							<div class="support-box pos-center front">
-								<div class="title">
-									<i class="fa-solid fa-envelope"></i>
-								</div>
-								<h4>SEND US E-MAIL</h4>
-								<p class="fs-15"><a href="mailto:msnnhp11@gmail.com">msnnhp11@gmail.com</a></p>
-							</div>
-							<div class="support-box pos-center back">
-								<div class="title">
-									<i class="fa-solid fa-envelope"></i>
-								</div>
-								<h4>E-MAIL ADDRESS</h4>
-								<p class="fs-15"><a href="mailto:msnnhp11@gmail.com">msnnhp11@gmail.com</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="flip-container">
-						<div class="flipper">
-							<div class="support-box pos-center front">
-								<div class="title">
-									<i class="fa-solid fa-location-dot"></i>
-								</div>
-								<h4>VISIT US</h4>
-								<p class="fs-15">Sleeping pod hotel Gorakhpur railway station platform number 9</p>
-							</div>
-							<div class="support-box pos-center back">
-								<div class="title">
-								<i class="fa-solid fa-location-dot"></i>
-								</div>
-								<h4>Address</h4>
-								<p class="fs-15">Sleeping pod hotel Gorakhpur railway station platform number 9</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</section>
 </div>
+<script>
+    let mobile_site = false;
 
+    if (window.innerWidth <= 768) {
+        mobile_site = true;
+    }
+</script>
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
 
+  function goSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = n;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  setInterval(() => {
+    goSlide((currentSlide + 1) % slides.length);
+  },3000);
+
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    const isVisible = links.style.display === 'flex';
+    links.style.display = isVisible ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '60px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = 'rgba(245,242,236,0.98)';
+    links.style.padding = '1.5rem 2rem';
+    links.style.gap = '1.25rem';
+    links.style.borderBottom = '1px solid rgba(184,146,42,0.2)';
+  }
+
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('nav');
+    nav.style.background = window.scrollY > 60 ? 'rgba(245,242,236,0.99)' : 'rgba(245,242,236,0.96)';
+    const links = document.querySelector('.nav-links');
+    if(mobile_site){
+    	const isVisible = links.style.display === 'flex';
+    	links.style.display = isVisible ? 'none' : 'none';
+    }
+    
+
+  });
+</script>
 <?php get_footer();?>

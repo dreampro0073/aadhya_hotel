@@ -2,7 +2,7 @@
 
 function my_custom_scripts()
 {
-    $version = '1.3.3';
+    $version = '1.3.4';
 
     
     $local_path = get_template_directory_uri();
@@ -40,7 +40,7 @@ function my_custom_scripts()
     
     wp_enqueue_script('angular-js', get_template_directory_uri() . '/front-end/js/angular.min.js', array(), '1.1.3', true);
     wp_enqueue_script('jcs-validate-js', get_template_directory_uri() . '/front-end/js/jcs-auto-validate.js', array(), '1.1.3', true);
-    wp_enqueue_script('app-js', get_template_directory_uri() . '/front-end/js/app.js', array(), '1.1.3', true);
+    wp_enqueue_script('app-js', get_template_directory_uri() . '/front-end/js/app.js', array(), $version, true);
 
 
 

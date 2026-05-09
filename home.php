@@ -52,7 +52,7 @@
 		    <h1 class="hero-title">Gorakhpur Sleeping<br><em>Pods Hotels</em></h1>
 		    <p class="hero-sub">Comfortable sleeping pods, premium cabins, and peaceful double bed rooms near Gorakhpur railway station — affordable luxury stays with modern amenities and secure hotel booking.</p>
 		    <div class="hero-actions">
-		      <a href="<?php echo esc_url(home_url('/book')) ?>" class="btn-primary">Reserve a Room</a>
+		      <a href="<?php echo esc_url(home_url('/book')) ?>" class="btn-primary" aria-label="Book Room">Reserve a Room</a>
 		      <a href="#services" class="btn-outline">Explore Rooms</a>
 		    </div>
 		  </div>
@@ -104,7 +104,7 @@
 		      <p class="section-label">Accommodations</p>
 		      <h2 class="section-title" style="margin-bottom:0">Explore Our Rooms</h2>
 		    </div>
-		    <a href="<?php echo esc_url(home_url('/book')) ?>" class="btn-outline" style="margin-bottom:0.5rem">Book a Stay</a>
+		    <a href="<?php echo esc_url(home_url('/book')) ?>" class="btn-outline" style="margin-bottom:0.5rem" aria-label="Book NNHP Room">Book a Stay</a>
 		  </div>
 		  <div class="rooms-grid">
 		    <div class="room-card">
@@ -123,7 +123,7 @@
 		            <span class="amount">₹899</span>
 		            <span class="per">per 12 hours</span>
 		          </div>
-		          <a href="<?php echo esc_url(home_url('/book?type=beds')); ?>" class="room-book">Book Now</a>
+		          <a href="<?php echo esc_url(home_url('/book?type=beds')); ?>" class="room-book" aria-label="Book Double Bed Room">Book Now</a>
 		        </div>
 		      </div>
 		    </div>
@@ -144,7 +144,7 @@
 		            <span class="amount">₹399</span>
 		            <span class="per">per 6 hours</span>
 		          </div>
-		          <a href="<?php echo esc_url(home_url('/book?type=cabin')); ?>" class="room-book">Book Now</a>
+		          <a href="<?php echo esc_url(home_url('/book?type=cabin')); ?>" class="room-book" aria-label="Book Double Single Cabin">Book Now</a>
 		        </div>
 		      </div>
 		    </div>
@@ -166,7 +166,7 @@
 		            <span class="amount">₹299</span>
 		            <span class="per">per 6 hours</span>
 		          </div>
-		          <a href="<?php echo esc_url(home_url('/book?type=pods')); ?>" class="room-book">Book Now</a>
+		          <a href="<?php echo esc_url(home_url('/book?type=pods')); ?>" class="room-book" aria-label="Book Double Single Pod">Book Now</a>
 		        </div>
 		      </div>
 		    </div>
@@ -289,7 +289,7 @@
 		        <p>Gorakhpur Railway Station, Platform 9</p>
 		      </div>
 		      <div style="margin-top:2rem; text-align:center">
-		        <a href="<?php echo esc_url(home_url('/	book')); ?>" class="btn-primary" style="display:inline-block; width:100%; text-align:center">Book Your Stay Now</a>
+		        <a href="<?php echo esc_url(home_url('/	book')); ?>" class="btn-primary" style="display:inline-block; width:100%; text-align:center" aria-label="Book Room">Book Your Stay Now</a>
 		      </div>
 		    </div>
 		  </div>

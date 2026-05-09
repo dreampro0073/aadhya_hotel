@@ -24,7 +24,15 @@
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri()."/front-end/images/favicon.png" ?>">
-	
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NRM2WC6F78"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NRM2WC6F78');
+    </script>
   	<?php wp_head(); ?>
 </head>
 <body <?php body_class();?> >

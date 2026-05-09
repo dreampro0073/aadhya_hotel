@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hotel Reservation | New Nabratana Pvt Hospitality Hotels</title>
+	<!-- Basic Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<meta name="description" content="Book your stay with New Nabratana Pvt Hospitality Hotels in Gorakhpur. Enjoy comfortable rooms, quality service and a pleasant stay with easy and secure hotel reservation.">
+	<title>Gorakhpur Sleeping Pods Hotels | Hotel Reservation</title>
+	<meta name="description" content="Book your stay at Gorakhpur Sleeping Pods Hotels. Enjoy modern sleeping pods, comfortable rooms, affordable prices, and secure online hotel reservation in Gorakhpur.">
+	<meta name="keywords" content="Gorakhpur Sleeping Pods Hotels, sleeping pod hotel Gorakhpur, capsule hotel Gorakhpur, hotel reservation Gorakhpur, budget hotel Gorakhpur, online hotel booking">
 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Gorakhpur Sleeping Pods Hotels | Hotel Reservation">
+	<meta property="og:description" content="Book modern sleeping pods and comfortable hotel rooms in Gorakhpur with secure online reservation and affordable pricing.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://yourdomain.com">
+	<meta property="og:image" content="<?php echo get_template_directory_uri().'/front-end/images/pic1b.jpeg'; ?>">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Gorakhpur Sleeping Pods Hotels">
+	<meta name="twitter:description" content="Affordable sleeping pods and hotel rooms in Gorakhpur with easy online booking.">
+	<meta name="twitter:image" content="<?php echo get_template_directory_uri()."/front-end/images/pic1b.jpeg"; ?>">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri()."/front-end/images/favicon.png" ?>">
+	
   	<?php wp_head(); ?>
 </head>
 <body <?php body_class();?> >

@@ -78,9 +78,13 @@
     <!-- LEFT: SINGLE-STEP FORM -->
       <div class="booking-form-section">
         <div class="form-header">
-          <div class="form-eyebrow">Reservation</div>
-          <h1 class="form-title">Book Your Stay</h1>
-          <p class="form-subtitle">Fill in all details below to secure your room. Payment is collected at check-in.</p>
+          <div class="form-eyebrow">Hotel Reservation</div>
+
+          <h1 class="form-title">Book Sleeping Pods & Hotel Rooms in Gorakhpur</h1>
+
+          <p class="form-subtitle">
+            Book comfortable sleeping pods, cabins, and hotel rooms near Gorakhpur Railway Station with secure reservation and affordable pricing.
+            </p>
         </div>
 
         <!-- SECTION 1: GUEST INFO -->

@@ -8,7 +8,6 @@
 	// 	'front-end/images/banner3.jpg',
 	// 	'front-end/images/banner2.jpg',
 	// 	'front-end/images/banner7.jpg',
-	
 	// ]; 
 	$banner_images=[
 		'front-end/images/pic1d.jpeg',
@@ -46,10 +45,12 @@
 			<?php } ?>
 		    
 		  </div>
+
+
 		  <div class="hero-content">
-		    <div class="hero-eyebrow">Gorakhpur Railway Station</div>
-		    <h1 class="hero-title">New Nabratana<br><em>Pvt Hospitality</em></h1>
-		    <p class="hero-sub">Comfort, rest, and quiet elegance — steps from the platform. Discover premium pods, cabins, and double bed rooms at unbeatable value.</p>
+		    <div class="hero-eyebrow">New Nabratana Pvt Hospitality</div>
+		    <h1 class="hero-title">Gorakhpur Sleeping<br><em>Pods Hotels</em></h1>
+		    <p class="hero-sub">Comfortable sleeping pods, premium cabins, and peaceful double bed rooms near Gorakhpur railway station — affordable luxury stays with modern amenities and secure hotel booking.</p>
 		    <div class="hero-actions">
 		      <a href="<?php echo esc_url(home_url('/book')) ?>" class="btn-primary">Reserve a Room</a>
 		      <a href="#services" class="btn-outline">Explore Rooms</a>
@@ -76,11 +77,22 @@
 		    </div>
 		    <div>
 		      <p class="section-label">Welcome</p>
-		      <h2 class="section-title">Where Comfort<br>Meets Serenity</h2>
-		      <div class="divider"></div>
-		      <p class="section-body">Discover a place where comfort meets serenity. From stylish rooms to warm hospitality, NNHP Pods/Hotels Service offers a peaceful retreat with world-class amenities and personalized service for every guest.</p>
-		      <p class="section-body" style="margin-top:1rem">Whether you are transiting through Gorakhpur or staying for leisure, our team ensures a seamless and enjoyable experience.</p>
-		      <a href="#services" class="btn-primary" style="margin-top:2rem; display:inline-block">Our Rooms</a>
+
+					<h2 class="section-title">Best Sleeping Pods &<br>Comfortable Hotel Rooms in Gorakhpur</h2>
+
+					<div class="divider"></div>
+
+					<p class="section-body">
+					Experience premium sleeping pods, modern cabins, and comfortable hotel rooms at NNHP Pods/Hotels Service in Gorakhpur. Located near the railway station, we provide affordable luxury stays, peaceful surroundings, clean accommodations, and modern amenities for travelers, families, and business guests.
+					</p>
+
+					<p class="section-body" style="margin-top:1rem">
+					Whether you are looking for a short transit stay, overnight rest, or a relaxing vacation in Gorakhpur, our hotel ensures secure booking, warm hospitality, high-speed WiFi, hygienic rooms, and a seamless guest experience at budget-friendly prices.
+					</p>
+
+					<a href="#services" class="btn-primary" style="margin-top:2rem; display:inline-block">
+					Our Rooms
+					</a>
 		    </div>
 		  </div>
 		</section>
@@ -101,12 +113,15 @@
 		        <span class="room-type-tag">Double Beds</span>
 		      </div>
 		      <div class="room-body">
-		        <h3 class="room-name">Double Bed Room</h3>
-		        <p class="room-desc">Spacious and comfortable rooms ideal for couples or guests who prefer extra comfort. Cozy bedding, clean interiors, and a peaceful atmosphere.</p>
+		       <h3 class="room-name">Double Bed Room</h3>
+
+						<p class="room-desc">
+						Enjoy spacious double bed rooms designed for couples, families, and travelers seeking comfort in Gorakhpur. Featuring cozy bedding, clean interiors, air-conditioned rooms, free WiFi, and a peaceful atmosphere for a relaxing stay near the railway station.
+						</p>
 		        <div class="room-footer">
 		          <div class="room-price">
-		            <span class="amount">₹599</span>
-		            <span class="per">per 6 hours</span>
+		            <span class="amount">₹899</span>
+		            <span class="per">per 12 hours</span>
 		          </div>
 		          <a href="<?php echo esc_url(home_url('/book?type=beds')); ?>" class="room-book">Book Now</a>
 		        </div>
@@ -120,7 +135,10 @@
 		      </div>
 		      <div class="room-body">
 		        <h3 class="room-name">Single Cabin</h3>
-		        <p class="room-desc">Private and well-designed cabins perfect for solo travelers or short stays. Enjoy privacy, cleanliness, and a calm environment at an affordable price.</p>
+
+						<p class="room-desc">
+						Stay in our private single cabins designed for solo travelers, business guests, and short transit stays in Gorakhpur. Enjoy a peaceful environment, hygienic interiors, comfortable bedding, modern amenities, and affordable accommodation near the railway station.
+						</p>
 		        <div class="room-footer">
 		          <div class="room-price">
 		            <span class="amount">₹399</span>
@@ -139,7 +157,10 @@
 		      </div>
 		      <div class="room-body">
 		        <h3 class="room-name">Single Pod</h3>
-		        <p class="room-desc">Modern capsule-style pods offering a smart, affordable, and unique stay. Perfect for quick rest, transit travelers, or budget-friendly accommodation.</p>
+
+						<p class="room-desc">
+						Experience modern capsule-style single pods in Gorakhpur, ideal for solo travelers and transit guests seeking affordable and comfortable accommodation. Enjoy smart space design, clean interiors, privacy, peaceful surroundings, and essential amenities for a relaxing short stay near the railway station.
+						</p>
 		        <div class="room-footer">
 		          <div class="room-price">
 		            <span class="amount">₹299</span>
@@ -188,11 +209,19 @@
 		<section id="about">
 		  <div class="about-section">
 		    <div>
-		      <p class="section-label">About Us</p>
-		      <h2 class="section-title">A Premium Stay<br>in Gorakhpur</h2>
-		      <div class="divider"></div>
-		      <p class="section-body">NNHP Pods/Hotels Service is a premium destination designed for travelers seeking comfort, quality, and tranquility. Located at Gorakhpur Railway Station Platform 9, we offer beautifully furnished rooms, modern amenities, and exceptional service.</p>
-		      <p class="section-body" style="margin-top:1rem">Our mission is to provide a memorable stay through warm hospitality, clean and elegant spaces, and attention to every detail.</p>
+		     <p class="section-label">About Us</p>
+
+					<h2 class="section-title">Affordable Sleeping Pods<br>in Gorakhpur</h2>
+
+					<div class="divider"></div>
+
+					<p class="section-body">
+					NNHP Pods/Hotels Service offers modern sleeping pods, private cabins, and comfortable hotel rooms for travelers seeking convenience, affordability, and relaxation. Located near Gorakhpur Railway Station Platform 9, we provide clean accommodations, essential amenities, and a peaceful environment for every guest.
+					</p>
+
+					<p class="section-body" style="margin-top:1rem">
+					Our goal is to deliver a smooth and comfortable stay with hygienic spaces, friendly hospitality, secure booking, and quality service for transit travelers, tourists, and business visitors.
+					</p>
 		      <div class="about-stats">
 		        <div class="stat-box">
 		          <div class="stat-number">3</div>

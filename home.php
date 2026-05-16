@@ -10,9 +10,10 @@
 	// 	'front-end/images/banner7.jpg',
 	// ]; 
 	$banner_images=[
-		'front-end/images/pic1d.jpeg',
-		'front-end/images/pic1c.jpeg',
 		'front-end/images/pic1f.jpeg',
+		'front-end/images/banner13.jpeg',
+		'front-end/images/banner12.jpg',
+		
 	]; 
 ?>
 
@@ -68,10 +69,10 @@
 		  <div class="welcome">
 		    <div class="welcome-images">
 		      <div class="welcome-img-main">
-		        <img src="<?php echo $image_url."front-end/images/pic1.jpg"; ?>" alt="Hotel interior">
+		        <img src="<?php echo $image_url."front-end/images/banner14.jpg"; ?>" alt="Hotel interior">
 		      </div>
 		      <div class="welcome-img-accent">
-		        <img src="<?php echo $image_url."front-end/images/pic2.jpg"; ?>" alt="Room detail">
+		        <img src="<?php echo $image_url."front-end/images/banner15.jpg"; ?>" alt="Room detail">
 		      </div>
 		      <div class="welcome-badge">Est. Gorakhpur</div>
 		    </div>
@@ -109,7 +110,7 @@
 		  <div class="rooms-grid">
 		    <div class="room-card">
 		      <div class="room-img">
-		        <img src="<?php echo $image_url."front-end/images/pic1e.jpeg"; ?>" alt="Double Beds">
+		        <img src="<?php echo $image_url."front-end/images/banner14.jpg"; ?>" alt="Double Beds">
 		        <span class="room-type-tag">Double Beds</span>
 		      </div>
 		      <div class="room-body">
@@ -129,7 +130,7 @@
 		    </div>
 		    <div class="room-card">
 		      <div class="room-img">
-		      	<img src="<?php echo $image_url."front-end/images/pic1f.jpeg"; ?>" alt="Single Cabin">
+		      	<img src="<?php echo $image_url."front-end/images/pic1e.jpeg"; ?>" alt="Single Cabin">
 		        
 		        <span class="room-type-tag">Single Cabin</span>
 		      </div>
@@ -150,7 +151,7 @@
 		    </div>
 		    <div class="room-card">
 		      <div class="room-img">
-		      	<img src="<?php echo $image_url."front-end/images/pic1c.jpeg"; ?>" alt="Single Pod">
+		      	<img src="<?php echo $image_url."front-end/images/pic1f.jpeg"; ?>" alt="Single Pod">
 
 		        
 		        <span class="room-type-tag">Single Pod</span>
@@ -187,11 +188,11 @@
 
 		      </div>
 		      <div class="gallery-item">
-		      	<img src="<?php echo $image_url."front-end/images/pic1.jpg"; ?>" alt="Room">
+		      	<img src="<?php echo $image_url."front-end/images/banner17.jpg"; ?>" alt="Room">
 
 		      </div>
 		      <div class="gallery-item">
-		      	<img src="<?php echo $image_url."front-end/images/pic2.jpg"; ?>" alt="Amenity">
+		      	<img src="<?php echo $image_url."front-end/images/banner15.jpg"; ?>" alt="Amenity">
 		        
 		      </div>
 		      <div class="gallery-item">

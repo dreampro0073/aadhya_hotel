@@ -13,7 +13,7 @@
 		'front-end/images/pic1f.jpeg',
 		'front-end/images/banner13.jpeg',
 		'front-end/images/banner12.jpg',
-		
+
 	]; 
 ?>
 
@@ -130,7 +130,7 @@
 		    </div>
 		    <div class="room-card">
 		      <div class="room-img">
-		      	<img src="<?php echo $image_url."front-end/images/pic1e.jpeg"; ?>" alt="Single Cabin">
+		      	<img src="<?php echo $image_url."front-end/images/banner16.jpg"; ?>" alt="Single Cabin">
 		        
 		        <span class="room-type-tag">Single Cabin</span>
 		      </div>
@@ -243,7 +243,7 @@
 		      </div>
 		    </div>
 		    <div class="about-img">
-		      <img src="<?php echo $image_url."front-end/images/pic1e.jpeg"; ?>" alt="Hotel room">
+		      <img src="<?php echo $image_url."front-end/images/banner16.jpg"; ?>" alt="Hotel room">
 
 		      
 		      <div class="about-quote">

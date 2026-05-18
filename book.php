@@ -42,6 +42,10 @@
           <td>{{booked_entry.name}}</td>
         </tr>
         <tr>
+          <td>Booking Id</td>
+          <td>{{booked_entry.id}}</td>
+        </tr>
+        <tr>
           <td>Mobile</td>
           <td>{{booked_entry.mobile_no}}</td>
         </tr>

@@ -1,4 +1,4 @@
-<?php /* Template Name: Home Page Old */ ?>
+<?php /* Template Name: Home Page */ ?>
 
 <?php get_header(); ?>
 <?php
@@ -203,6 +203,21 @@
 		      	<img src="<?php echo $image_url."front-end/images/pic1c.jpeg"; ?>" alt="Pod">
 		      </div>
 		    </div>
+		    <div class="hero-video-contianer">
+		    	<div class="hero-video video-content">
+
+		        <div class="vivo-hero-image" data-video="Ua52eJFBZec">
+		            <img class="fet-image" src="<?php echo get_template_directory_uri().'/front-end/images/video-thumb.jpg'; ?>">
+
+		            <div class="youtube-icon">
+		                <img src="<?php echo get_template_directory_uri().'/front-end/images/youtube.png'; ?>" />
+		            </div>
+		        </div>
+		        <div class="vid-yt">
+		        </div>
+			    </div>
+		    </div>
+	      
 		  </div>
 		</section>
 

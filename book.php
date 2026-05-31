@@ -34,7 +34,12 @@
   <div class="success-overlay"  ng-if="!show_form">
     <div class="success-icon">✓</div>
     <h2 class="success-title">Booking Confirmed</h2>
-    <p class="success-sub">Thank you for choosing NNHP Hotel. We look forward to welcoming you. Please present this confirmation at check-in.</p>
+    <p class="success-sub mb-2">Thank you for choosing NNHP Hotel. We look forward to welcoming you. Please present this confirmation at check-in.</p>
+    <p class="success-sub sub1">
+      <b>
+        A confirmation email has been sent to your registered email address. Please check your inbox or spam folder.
+      </b>  
+    </p>
     <div class="booking-details-card" id="confirmCard">
       <table class="table">
         <tr>

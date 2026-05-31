@@ -129,7 +129,9 @@
   .hero-title em { font-style: italic; color: var(--gold-dark); }
 
   .hero-sub {
-    font-size: 0.95rem; color: rgba(44,40,32,0.75);
+    font-size: 0.95rem; 
+    // color: rgba(44,40,32,0.75);
+    color: #000;
     max-width: 480px; margin: 0 auto 2.5rem;
     font-weight: 300; line-height: 1.8;
   }
@@ -757,10 +759,13 @@
   }
 
   .success-sub {
-    font-size: 0.9rem; color: var(--text-muted); max-width: 400px;
+    font-size: 0.9rem; color: var(--text-muted); max-width: 480px;
     line-height: 1.8; margin-bottom: 2.5rem;
   }
-
+  .success-sub.sub1{
+    color: var(--gold);
+    line-height: 1.4;
+  }
   .booking-details-card {
     background: var(--card-bg); border: 1px solid var(--border);
     padding: 2rem; min-width: 50%; max-width: 50%; width: 100%;
@@ -812,4 +817,125 @@
         color: #f00;
         display: block;
     }
+}
+.hero-video-contianer{
+  max-width: 80%;
+  margin: auto !important;
+  margin-top: 60px !important;
+}
+.hero-video {
+  border-radius: 12px;
+  display: inherit;
+  inset: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  z-index: 9;
+
+  &.pb-26 { padding-bottom: 26.25%; }
+  &.pb-100 { padding-bottom: 100%; }
+  &.no-rad { border-radius: 0; }
+  &.pb-42 { padding-bottom: 42%; }
+  &.pb-31 { padding-bottom: 31.25%; }
+
+  iframe {
+    position: absolute;
+    inset: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .vivo-hero-image {
+    aspect-ratio: 16/9;
+
+    .youtube-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      img {
+        width: 60px;
+        height: auto;
+        opacity: 0.8;
+      }
+    }
+
+    .fet-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: inline-block;
+      z-index: 9999;
+      cursor: pointer;
+
+      &.yt-btn {
+        background-color: transparent;
+        height: auto;
+        width: 60px;
+
+        img {
+          background-color: #fff;
+          border-radius: 11px;
+          height: 40px;
+          cursor: pointer;
+        }
+      }
+
+      &.polygon {
+        img {
+          background-color: inherit;
+          aspect-ratio: inherit !important;
+          border-radius: 0 !important;
+          height: 80px !important;
+          width: auto !important;
+          transition: all 0.3s ease;
+
+          &:hover {
+            scale: 0.9;
+          }
+        }
+      }
+    }
+
+    @supports not (aspect-ratio: 16/9) {
+      padding-top: 56.25%;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-top: 0;
+      }
+    }
+
+    &.active {
+      .play-btn {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .hero-video-contianer{
+    max-width: 100%;
+    margin: auto !important;
+    margin-top: 32px !important;
+  }
 }

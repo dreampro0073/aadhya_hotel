@@ -31,7 +31,7 @@
     <a href="<?php echo esc_url(home_url('/')) ?>" class="nav-back">Back to Home</a>
   </nav>
 
-  <div class="success-overlay"  ng-if="!show_form">
+  <div class="success-overlay"  ng-if="show_form">
     <div class="success-icon">✓</div>
     <h2 class="success-title">Booking Confirmed</h2>
     <p class="success-sub mb-2">Thank you for choosing NNHP Hotel. We look forward to welcoming you. Please present this confirmation at check-in.</p>

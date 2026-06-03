@@ -2,7 +2,7 @@
 
 function my_custom_scripts()
 {
-    $version = '1.3.7';
+    $version = '1.3.8';
 
     
     $local_path = get_template_directory_uri();

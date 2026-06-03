@@ -142,8 +142,8 @@
 						</p>
 		        <div class="room-footer">
 		          <div class="room-price">
-		            <span class="amount">₹399</span>
-		            <span class="per">per 6 hours</span>
+		            <span class="amount">₹599</span>
+		            <span class="per">per 12 hours</span>
 		          </div>
 		          <a href="<?php echo esc_url(home_url('/book?type=cabin')); ?>" class="room-book" aria-label="Book Double Single Cabin">Book Now</a>
 		        </div>
@@ -164,8 +164,8 @@
 						</p>
 		        <div class="room-footer">
 		          <div class="room-price">
-		            <span class="amount">₹299</span>
-		            <span class="per">per 6 hours</span>
+		            <span class="amount">₹499</span>
+		            <span class="per">per 12 hours</span>
 		          </div>
 		          <a href="<?php echo esc_url(home_url('/book?type=pods')); ?>" class="room-book" aria-label="Book Double Single Pod">Book Now</a>
 		        </div>

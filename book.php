@@ -128,12 +128,12 @@
           <div class="room-type-option"  ng-class="{'selected': formData.type == 2}" ng-click="selectRoom(2)">
             <div class="rt-icon">🚪</div>
             <div class="rt-name">Single Cabin</div>
-            <div class="rt-price">₹399</div>
+            <div class="rt-price">₹599</div>
           </div>
           <div class="room-type-option"  ng-class="{'selected': formData.type == 1}"  ng-click="selectRoom(1)">
             <div class="rt-icon">🏠</div>
             <div class="rt-name">Single Pod</div>
-            <div class="rt-price">₹299</div>
+            <div class="rt-price">₹499</div>
           </div>
         </div>
 
@@ -162,7 +162,7 @@
             <label>Duration <span class="required-mark">*</span></label>
             <select ng-model="formData.hours_occ" ng-change="changeAmount(); checkoutTime();" required convert-to-number >
                 <option value="">--Select--</option>
-                <option ng-show="!(item.value == 6 && formData.type == 3)" ng-repeat="item in hours" value="{{item.value}}">{{ item.label}}</option>
+                <option ng-show="!(item.value == 6)" ng-repeat="item in hours" value="{{item.value}}">{{ item.label}}</option>
             </select>
           </div>
           <div class="field form-group">

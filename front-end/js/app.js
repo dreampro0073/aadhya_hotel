@@ -113,7 +113,7 @@ app.controller('bookCtrl',function($scope , $http, $timeout , DBService){
             name: 'Double Bed Room',
             tag: 'Double Bed',
             price: 899,
-            img: 'https://hotel.aadhyasriwebsolutions.com/wp-content/themes/aadhya_theme/front-end/images/pic1e.jpeg',
+            img: 'https://gorakhpursleepingpods.in/wp-content/themes/aadhya_theme/front-end/images/banner14.jpg',
             ideal: 'Couples & guests',
             desc: 'Spacious rooms with cozy bedding, clean interiors and peaceful atmosphere.'
         },
@@ -122,8 +122,8 @@ app.controller('bookCtrl',function($scope , $http, $timeout , DBService){
             type:2,
             name: 'Single Cabin',
             tag: 'Single Cabin',
-            price: 599,
-            img: 'https://hotel.aadhyasriwebsolutions.com/wp-content/themes/aadhya_theme/front-end/images/pic1f.jpeg',
+            price: 399,
+            img: 'https://gorakhpursleepingpods.in/wp-content/themes/aadhya_theme/front-end/images/banner16.jpg',
             ideal: 'Solo travelers',
             desc: 'Private, well-designed cabins for short stays with calm environment.'
         },
@@ -132,8 +132,8 @@ app.controller('bookCtrl',function($scope , $http, $timeout , DBService){
             type:1,
             name: 'Single Pod',
             tag: 'Single Pod',
-            price: 499,
-            img: 'https://hotel.aadhyasriwebsolutions.com/wp-content/themes/aadhya_theme/front-end/images/pic1c.jpeg',
+            price: 299,
+            img: 'https://gorakhpursleepingpods.in/wp-content/themes/aadhya_theme/front-end/images/pic1f.jpeg',
             ideal: 'Transit travelers',
             desc: 'Modern capsule-style pods for quick rest and budget-friendly stays.'
         }
